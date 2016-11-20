@@ -1,0 +1,43 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "description": "FreeCodeCamp Backend Challenges",
+  "main": "server.js",
+  "dependencies": {
+    "core-util-is": "~1.0.2",
+    "crypto": "~0.0.3",
+    "body-parser": "~1.15.2",
+    "inherits": "~2.0.3",
+    "isarray": "~1.0.0",
+    "bl": "~1.1.2",
+    "bower": "~1.8.0",
+    "mongodb": "~2.2.11",
+    "process-nextick-args": "~1.0.7",
+    "jade": "~1.11.0",
+    "learnyoumongo": "~3.2.0",
+    "readable-stream": "~2.0.6",
+    "through2": "~2.0.1",
+    "express": "~4.14.0",
+    "util-deprecate": "~1.0.2",
+    "xtend": "~4.0.1",
+    "through2-map": "~3.0.0",
+    "string_decoder": "~0.10.31",
+    "stylus": "~0.54.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"working\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devanshdalal/npm-test.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "devanshdalal",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/devanshdalal/npm-test/issues"
+  }
+}
