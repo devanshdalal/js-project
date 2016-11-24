@@ -1,39 +1,37 @@
-# node-js-getting-started
+# FreeCodeCamp - Timestamp Microservice
+This repository contains a small full-stack Javascript web application.
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+This was done in order to complete the [timestamp microservice
+challenge](http://www.freecodecamp.com/challenges/timestamp-microservice) from
+[FreeCodeCamp](http://www.freecodecamp.com).
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+This repository will return a JSON representation of the unix timestamp and
+natural date, given a proper query string to the `/` endpoint.
 
-## Running Locally
+## Live Version
+This application can be found [live on
+Heroku](https://fcc-timestamps-ms.herokuapp.com/).
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+## Installation and Startup
+To run this application locally, first install the dependencies by running `npm
+install` in the root directory of the application.
 
-```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
+Then, start the server by running `nodejs index.js`. **Note:** Replace `nodejs`
+with `node` if your system's executable is called `node`.
+
+## Usage
+The application will parse the query string passed into the `/` endpoint, and
+return JSON with a `unix` property and a `natural` property. These properties
+represent the unix timestamp and a human-readable date, respectively.
+
+### Example Input
+```
+https://fcc-timestamps-ms.herokuapp.com//December%2015,%202015
+https://fcc-timestamps-ms.herokuapp.com//1450137600
 ```
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
+### Example Output
 ```
-$ heroku create
-$ git push heroku master
-$ heroku open
+{ "unix": 1450137600, "natural": "December 15, 2015" }
 ```
-or
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
