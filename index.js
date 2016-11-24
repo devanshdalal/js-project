@@ -1,4 +1,5 @@
 var dateFormat = require('dateformat');
+var path = require('path');
 var moment = require('moment');
 var express = require('express');
 var app = express();
@@ -16,9 +17,19 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-app.get('/', function(request, response) {
-  response.render('pages/index');
+app.get('/', function(req, res) {
+  var fileName = path.join(__dirname, 'index.html');
+  res.sendFile(fileName, function (err) {
+    if (err) {
+      console.log(err);
+      res.status(err.status).end();
+    }
+    else {
+      console.log('Sent:', fileName);
+    }
+  });
 });
+
 
 app.get('/:NAME', function (req, res) {
   var timestamp={
