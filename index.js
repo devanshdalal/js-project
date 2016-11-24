@@ -53,7 +53,7 @@ app.get('/:NAME', function (req, res) {
   }else{
     
   }
-  res.send(JSON.stringify(timestamp)+"\n");
+  res.send(timestamp);
 })
 
 
